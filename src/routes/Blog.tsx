@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { config } from "../utils/config";
 import { getAccountInfo, getBlog } from "../utils/services/HttpRequests";
-import { BlogType, GithubAccountType } from "../utils/types";
 import { formatDistanceToNowStrict } from "date-fns";
+import { BlogType, GithubAccountType } from "../utils/types";
 
 const Blog = () => {
   const [profile, setProfile] = useState<GithubAccountType>({
@@ -20,6 +20,7 @@ const Blog = () => {
   });
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
+  const [time, setTime] = useState<number>(0);
 
   const { id } = useParams();
 
@@ -40,6 +41,8 @@ const Blog = () => {
             ...updatedResponse,
           }));
 
+          setTime(parseInt(updatedResponse.Unixtimestamp));
+
           getAccountInfo()
             .then((res) => {
               setProfile({
@@ -55,8 +58,6 @@ const Blog = () => {
               });
             });
 
-          console.log(blog.Unixtimestamp);
-
           document
             .querySelector(".div")
             ?.insertAdjacentHTML("afterbegin", response.HTML);
@@ -66,8 +67,8 @@ const Blog = () => {
           setError(true);
         });
     }
-    setLoading(false);
     setupBlog();
+    setLoading(false);
   }, []);
 
   return (
@@ -165,12 +166,9 @@ const Blog = () => {
                   <div className="flex flex-row gap-4">
                     <span className="text-[#ccc] flex flex-row items-center ml-3">
                       Published{" "}
-                      {formatDistanceToNowStrict(
-                        new Date(parseInt(blog.Unixtimestamp)),
-                        {
-                          addSuffix: true,
-                        }
-                      )}{" "}
+                      {formatDistanceToNowStrict(new Date(time), {
+                        addSuffix: true,
+                      })}
                     </span>
                   </div>
                 </div>
@@ -194,7 +192,7 @@ const Blog = () => {
                 initial={{ translateY: 1000 }}
                 animate={{ translateY: 0 }}
                 transition={{ duration: 1 }}
-                className="div mt-16 pb-12 prose prose-indigo /*md:prose-lg*/ xl:mx-6 prose-headings:text-white prose-p:text-[#bbb] prose-a:[#40cf83] prose-code:text-[#4138eb] prose-li:text-[#bbb]"
+                className="div mt-16 pb-12 prose prose-indigo xl:mx-6 prose-headings:text-white prose-p:text-[#bbb] prose-a:[#40cf83] prose-code:text-[#4138eb] prose-li:text-[#bbb]"
               ></motion.div>
             </>
           )}
