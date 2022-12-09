@@ -68,10 +68,7 @@ const Navbar = () => {
         {opened ? (
           <div className="h-fit w-44 mr-2 z-[999] p-2 bg-[#18181C] fixed right-0 top-11 rounded-md flex flex-col gap-2 mobile-div">
             {MockNav.map((item) => (
-              <div
-                className="flex flex-row items-center text-[1.1rem]"
-                key={item.id}
-              >
+              <div className="flex flex-row items-center" key={item.id}>
                 <a href={item.href} key={item.id} className="ml-2">
                   {item.name}
                 </a>
