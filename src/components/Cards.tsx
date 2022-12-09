@@ -1,5 +1,4 @@
 import { TestimonialType } from "../utils/types";
-import Time from "time-passed";
 import React from "react";
 import { motion } from "framer-motion";
 
