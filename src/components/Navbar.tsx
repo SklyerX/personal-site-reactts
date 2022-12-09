@@ -49,7 +49,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      <nav className="w-[100%] banner-container top-0 left-0 bg-[#0e1117c8] fixed backdrop-blur-md z-[999] mr-2 md:flex md:justify-end hidden transition-all duration-500 ease-out">
+      <nav className="w-[100%] banner-container top-0 left-0 bg-[#0e1117c8] fixed backdrop-blur-md z-[999] mr-3 md:flex md:justify-end hidden transition-all duration-500 ease-out">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -66,10 +66,10 @@ const Navbar = () => {
           />
         </svg>
         {opened ? (
-          <div className="h-fit w-44 z-[999] p-2 bg-[#18181C] fixed right-0 top-11 rounded-md flex flex-col gap-2 mobile-div">
+          <div className="h-fit w-44 mr-2 z-[999] p-2 bg-[#18181C] fixed right-0 top-11 rounded-md flex flex-col gap-2 mobile-div">
             {MockNav.map((item) => (
               <div
-                className="flex flex-row items-center text-[1.2rem]"
+                className="flex flex-row items-center text-[1.1rem]"
                 key={item.id}
               >
                 <a href={item.href} key={item.id} className="ml-2">
