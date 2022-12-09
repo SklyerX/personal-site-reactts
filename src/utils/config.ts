@@ -1,6 +1,6 @@
 export const config = {
   urls: {
-    api: "http://localhost:3000",
+    api: "https://site.personalxsite.repl.co",
     github: "https://github.com/SklyerX",
     contactMail: "skylerx2323@gmail.com",
   },
