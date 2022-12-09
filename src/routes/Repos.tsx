@@ -177,8 +177,8 @@ const Repos = () => {
                         </div>
                         <a
                           href={`${
-                            item.mirror_url
-                              ? item.mirror_url
+                            item.homepage
+                              ? item.homepage
                               : `https://github.com/${config.names.githubUsername}/${item.name}`
                           }`}
                           className="flex flex-row items-center border border-[#334E46] text-[#86DFBA] rounded p-1 text-sm mb-8"

@@ -12,7 +12,7 @@ export type TestimonialType = {
 export type RepositoriesType = {
   created_at: string;
   updated_at: string;
-  mirror_url: string;
+  homepage: string;
   description: string;
   name: string;
   license: {
