@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Roboto+Mono:ital,wght@1,300;1,400;1,500;1,600&display=swap");
+
+body {
+  background-color: #040508;
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: none;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #40cf8e;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  color: #40cf8e;
+}
+
+.overlay {
+  display: none;
+}
+
+.navbar-container {
+  margin-top: 6rem;
+}
+
+.banner-container {
+  margin-top: 1.9rem;
+}
+
+/* .div {
+  font-family: "Inter", sans-serif;
+}
+
+.div h1,
+.div h2,
+.div h3,
+.div h4,
+.div h5 {
+  color: #fff;
+}
+
+.div h1 {
+  font-size: 2rem;
+}
+
+.div h2 {
+  font-size: 1.8rem;
+}
+
+.div h3 {
+  font-size: 1.5rem;
+}
+
+.div h4 {
+  font-size: 1.3rem;
+}
+
+.div h5 {
+  font-size: 1.1rem;
+}
+
+.div h5::before,
+.div h4::before,
+.div h3::before,
+.div h2::before,
+.div h1::before {
+  content: "# ";
+  color: #bbb;
+  font-weight: bold;
+}
+
+.div p {
+  color: #ccc;
+} */

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/htsdof.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkylerX | Fullstack developer</title>
+
+    <style>
+      #trailer {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        pointer-events: none;
+        transition: opacity 500ms ease;
+        opacity: 0;
+      }
+      body:hover > #trailer {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="trailer"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
