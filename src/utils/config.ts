@@ -1,6 +1,6 @@
 export const config = {
   urls: {
-    api: "https://site.mysitex.repl.co",
+    api: "https://api.skylerx.ir",
     github: "https://github.com/SklyerX",
     contactMail: "skylerx2323@gmail.com",
   },
