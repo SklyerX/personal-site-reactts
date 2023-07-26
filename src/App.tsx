@@ -35,9 +35,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<Navigate to="/main" />} />
+        <Route path="*" element={<Navigate to="/" />} />
         <Route
-          path="/main"
+          path="/"
           element={
             <>
               <Banner />

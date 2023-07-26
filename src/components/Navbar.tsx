@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { MockNav } from "../utils/mocks/navbar.mock";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const windowHref = window.location.href;
+  const location = useLocation();
   const [opened, setOpened] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,18 +26,18 @@ const Navbar = () => {
     <>
       <nav className="w-[100%] banner-container grid place-items-center top-0 left-0 bg-[#0e1117c8] fixed pb-6 backdrop-blur-md z-[999] md:hidden">
         <ul className="flex justify-center items-center gap-5 mt-5">
-          {MockNav.map((item) => (
-            <li key={item.id}>
+          {MockNav.map((item, index) => (
+            <li key={index}>
               <a className="block relative group text-white" href={item.href}>
                 {"fn " + item.name}(
                 <span
                   className={`${
-                    !windowHref.includes(item.name) ? "invisible" : ""
+                    location.pathname !== item.href ? "invisible" : ""
                   } group-hover:visible group-focus-visible:visible`}
                 >
-                  {windowHref.includes(item.name) ? "ctx" : "go"})
+                  {location.pathname === item.href ? "ctx" : "go"})
                 </span>
-                {windowHref.includes(item.name) ? (
+                {location.pathname === item.href ? (
                   ""
                 ) : (
                   <span className="absolute right-4 group-hover:invisible group-focus-visible:invisible">
@@ -67,12 +67,9 @@ const Navbar = () => {
         </svg>
         {opened ? (
           <div className="h-fit w-44 mr-2 z-[999] p-2 bg-[#18181C] fixed right-0 top-12 rounded-md flex flex-col gap-2 mobile-div">
-            {MockNav.map((item) => (
-              <div
-                className="flex flex-row items-center"
-                key={item.id}
-              >
-                <a href={item.href} key={item.id} className="ml-2">
+            {MockNav.map((item, index) => (
+              <div className="flex flex-row items-center" key={index}>
+                <a href={item.href} className="ml-2">
                   {item.name}
                 </a>
               </div>
