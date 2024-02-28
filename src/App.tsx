@@ -40,7 +40,7 @@ function App() {
           path="/"
           element={
             <>
-              <Banner />
+{/*               <Banner /> */}
               <Navbar />
               <Home />
               <Footer />
@@ -51,7 +51,7 @@ function App() {
           path="/blogs"
           element={
             <>
-              <Banner />
+{/*               <Banner /> */}
               <Navbar />
               <Blogs />
               <Footer />
@@ -62,7 +62,7 @@ function App() {
           path="/p/:id"
           element={
             <>
-              <Banner />
+{/*               <Banner /> */}
               <Navbar />
               <Blog />
             </>
@@ -72,7 +72,7 @@ function App() {
           path="/projects"
           element={
             <>
-              <Banner />
+{/*               <Banner /> */}
               <Navbar />
               <Projects />
               <Footer />
@@ -83,7 +83,7 @@ function App() {
           path="/repos"
           element={
             <>
-              <Banner />
+{/*               <Banner /> */}
               <Navbar />
               <Repos />
               <Footer />
