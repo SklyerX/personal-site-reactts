@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-[100%] banner-container grid place-items-center top-0 left-0 bg-[#0e1117c8] fixed pb-6 backdrop-blur-md z-[999] md:hidden">
+      <nav className="w-[100%] grid place-items-center top-0 left-0 bg-[#0e1117c8] fixed pb-6 backdrop-blur-md z-[999] md:hidden">
         <ul className="flex justify-center items-center gap-5 mt-5">
           {MockNav.map((item, index) => (
             <li key={index}>
@@ -49,7 +49,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      <nav className="w-[100%] banner-container top-0 left-0 bg-[#0e1117c8] fixed backdrop-blur-md z-[999] mr-3 md:flex md:justify-end hidden transition-all duration-500 ease-out">
+      <nav className="w-[100%] top-0 left-0 bg-[#0e1117c8] fixed backdrop-blur-md z-[999] mr-3 md:flex md:justify-end hidden transition-all duration-500 ease-out">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
