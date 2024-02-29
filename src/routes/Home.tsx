@@ -6,6 +6,7 @@ import { SkillData } from "../interface/skill.interface";
 import { getSkills, getTestimonials } from "../utils/services/HttpRequests";
 import Marquee from "react-fast-marquee";
 import Cards from "../components/Cards";
+import { config } from "../utils/config";
 
 const Home = () => {
   const [skills, setSkills] = useState<SkillsType[]>([]);
@@ -67,8 +68,9 @@ const Home = () => {
           />
         </h1>
         <p className="mt-2 text-[#bbb]">
-          I am a 15 y/o, self-taught software engineer from Iran. I'm currently
-          learning as much as I can and building amazing projects!
+          I am a {config.dateOfBirth.getYears()} y/o, self-taught software
+          engineer from {/*Iran*/}Canada. I'm currently learning as much as I
+          can and building amazing projects!
         </p>
       </motion.div>
       <motion.div
